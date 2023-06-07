@@ -85,7 +85,7 @@ def main():
 
     from PIL import Image
 
-    im = Image.open('images/download (1).jpg')
+    im = Image.open('spotify_search_engine/images/download (1).jpg')
 
     st.set_page_config(page_title="Spotify Search Engine", page_icon=im)
 
@@ -142,7 +142,7 @@ def main():
     st.markdown("- **Tempo**: The overall estimated tempo of a track in beats per minute (BPM).")
 
     footer_container = st.container()
-    footer_container.image("images/download (2).jpg", use_column_width=True)
+    footer_container.image("spotify_search_engine/images/download (1).jpg", use_column_width=True)
     st.markdown("###### Note: The data used was last updated on 21/05/2023 and was gathered using spotipy.", unsafe_allow_html=True)
     st.markdown("If you would like to keep using this tool please consider supporting the project.", unsafe_allow_html=True)
     render_paypal_donate_button()

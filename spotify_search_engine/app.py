@@ -13,7 +13,7 @@ def render_paypal_donate_button():
         <div style="position: fixed; bottom: 10px; right: 10px; z-index: 9999;">
             <form action="https://www.paypal.com/donate" method="post" target="_blank">
                 <input type="hidden" name="business" value="emizemani1@hotmail.com">
-                <input type="hidden" name="item_name" value="Support My Website">
+                <input type="hidden" name="item_name" value="Supporting the project">
                 <input type="hidden" name="currency_code" value="USD">
                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate with PayPal">
                 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">

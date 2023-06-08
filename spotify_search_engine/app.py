@@ -87,7 +87,7 @@ def main():
 
     im = Image.open('spotify_search_engine/images/download (1).jpg')
 
-    st.set_page_config(page_title="Spotify Search Engine", page_icon=im)
+    st.set_page_config(page_title="Spotify Search Engine", page_icon=im, layout="wide")
 
     hide_default_format = """
        <style>

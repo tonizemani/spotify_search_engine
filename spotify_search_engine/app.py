@@ -8,19 +8,6 @@ class SessionState:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
-def render_paypal_donate_button():
-    components.html('''
-        <div style="position: fixed; bottom: 10px; right: 10px; z-index: 9999;">
-            <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                <input type="hidden" name="business" value="emizemani1@hotmail.com">
-                <input type="hidden" name="item_name" value="Supporting the project">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate with PayPal">
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-        </div>
-    ''')
-
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
@@ -98,7 +85,7 @@ def main():
     st.markdown(hide_default_format, unsafe_allow_html=True)
 
     st.title("🔍 Spotify Search Engine")
-    st.markdown("This is a Spotify Search Engine that allows you to filter and explore songs based on different criteria which are explained at the end of the page.")
+    st.markdown("Find new songs by searching with different tags.")
 
     file1_path = "spotify_search_engine/data/half1.csv"
     file2_path = "spotify_search_engine/data/half2.csv"
@@ -112,7 +99,7 @@ def main():
     filtered_df = filter_dataframe(df)
 
     st.header("Showing results...")
-    num_results = 3
+    num_results = 5
     display_songs(filtered_df, num_results)
     num_results = 0
     if len(filtered_df) > num_results:
@@ -145,7 +132,6 @@ def main():
     footer_container.image("spotify_search_engine/images/download (2).jpg", use_column_width=True)
     st.markdown("###### Note: The data used was last updated on 21/05/2023 and was gathered using spotipy.", unsafe_allow_html=True)
     st.markdown("If you would like to keep using this tool please consider supporting the project.", unsafe_allow_html=True)
-    render_paypal_donate_button()
 
 
 if __name__ == "__main__":
